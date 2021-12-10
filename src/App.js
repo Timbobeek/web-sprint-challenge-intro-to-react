@@ -19,7 +19,7 @@ function App() {
   useEffect(()=>{
     axios.get('https://swapi.dev/api/people')
       .then(res =>{
-        console.log(res.data[0])
+        // console.log(res.data[0])
         setName(res.data)
       })
       .catch(err =>{
@@ -31,7 +31,7 @@ function App() {
     <StyledApp>
         <h1 className='Header'>Star Wars Characters</h1>
         {name.map(item => {
-          return <Character name={item.name}/>
+          return <Character name={item.name} key = {item.name}/>
         })}
     </StyledApp>
   );
