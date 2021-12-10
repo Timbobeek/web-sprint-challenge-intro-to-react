@@ -14,13 +14,13 @@ const StyledApp = styled.div`
 `
 
 function App() {
-  const [name, setName] = useState([])
+  const [names, setNames] = useState([])
 
   useEffect(()=>{
     axios.get('https://swapi.dev/api/people')
       .then(res =>{
         // console.log(res.data[0])
-        setName(res.data)
+        setNames(res.data)
       })
       .catch(err =>{
         console.log(err)
@@ -30,8 +30,8 @@ function App() {
   return(
     <StyledApp>
         <h1 className='Header'>Star Wars Characters</h1>
-        {name.map(item => {
-          return <Character name={item.name} key = {item.name}/>
+        {names.map((item, i) => {
+          return <Character name={item.name} key={i}/>
         })}
     </StyledApp>
   );

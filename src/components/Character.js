@@ -23,13 +23,9 @@ const Character = props => {
 
   return(
     <StyledCharacter>
-      <div className='name'>{name}</div>
+      {name}
     </StyledCharacter>
   );
 }
-
-// Write your Character component here
-
-
 
 export default Character;
