@@ -79,6 +79,17 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-1. Describe component state.
-1. Describe props.
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+It's a library for building applications that abstracts away a lot of syntax normally used when writing applications with 'vanilla' JS. It enables whatever application you build to live within one targeted DOM element. An important tool of React is a component, which is a JS function that uses JSX, which makes it possible to combine html,css and js into one element, makes it easier to debug too if needed. In the era of websites such as Facebook or Instagram, we need React to offload a lot of data that these apps use from the DOM. Simply put, React does a lot of work for web developers, as well as provides good user experience on the other end.
+
+2. Describe component state.
+
+In plain words, state is an object that manifests a component's current situation, it is managed within the component. State starts with a default value when a component mounts and then suffers from mutations in time. It is a snapshot in a way.
+
+3. Describe props.
+
+Props stands for properties, which are a component's configuration. Properties are received from above and immutable as far as the component receiving them is concerned. A component cannot change its props, but it is responsible for putting together the props of its child components.
+
+4. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+A side effect is anything that affects something outside the scope of the function being executed. For example, console logging, fetching data from an API, or manually manipulating the DOM. One can sync effects in a React component to changes of a certain state or props using an effect hook, such as useEffect(). Specifically, we can pass in a dependency array as the second argument to our effect hook. In that array, we can put specific state/props changes that we want to look for. 
