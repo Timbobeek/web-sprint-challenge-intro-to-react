@@ -2,6 +2,16 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Character from './components/Character'
 import axios from 'axios';
+import styled from 'styled-components';
+
+const StyledApp = styled.div`
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  font-family: ${pr=>pr.theme.mainFont};
+  font-weight: bold; 
+  padding: 1%;
+`
 
 function App() {
   const [name, setName] = useState([])
@@ -9,7 +19,7 @@ function App() {
   useEffect(()=>{
     axios.get('https://swapi.dev/api/people')
       .then(res =>{
-        //console.log(res.data[0].name)
+        console.log(res.data[0])
         setName(res.data)
       })
       .catch(err =>{
@@ -18,13 +28,12 @@ function App() {
   },[]);
 
   return(
-    <div className='App'>
-        <h1 className='Header'>Characters</h1>
-        {/* <Character name={name}/> */}
+    <StyledApp>
+        <h1 className='Header'>Star Wars Characters</h1>
         {name.map(item => {
           return <Character name={item.name}/>
         })}
-    </div>
+    </StyledApp>
   );
 }
 
