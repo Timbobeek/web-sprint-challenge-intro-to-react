@@ -4,13 +4,13 @@ import Character from './components/Character'
 import axios from 'axios';
 
 function App() {
-  const [name, setName] = useState('')
+  const [name, setName] = useState([])
 
   useEffect(()=>{
     axios.get('https://swapi.dev/api/people')
       .then(res =>{
         //console.log(res.data[0].name)
-        setName(res.data[0].name)
+        setName(res.data)
       })
       .catch(err =>{
         console.log(err)
@@ -20,7 +20,10 @@ function App() {
   return(
     <div className='App'>
         <h1 className='Header'>Characters</h1>
-        <Character name={name}/>
+        {/* <Character name={name}/> */}
+        {name.map(item => {
+          return <Character name={item.name}/>
+        })}
     </div>
   );
 }
