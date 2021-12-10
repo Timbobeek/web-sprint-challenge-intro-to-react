@@ -80,11 +80,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-It's a library for building applications that abstracts away a lot of syntax normally used when writing applications with 'vanilla' JS. It enables whatever application you build to live within one targeted DOM element. An important tool of React is a component, which is a JS function that uses JSX, which makes it possible to combine html,css and js into one element, makes it easier to debug too if needed. In the era of websites such as Facebook or Instagram, we need React to offload a lot of data that these apps use from the DOM. Simply put, React does a lot of work for web developers, as well as provides good user experience on the other end.
+It's a library for building applications that abstracts away a lot of syntax normally used when writing applications with 'vanilla' JS. It enables whatever application you build to live within one targeted DOM element. An important tool of React is a component, which is a JS function that uses JSX, which makes it possible to combine html, css, and js into one element, makes it easier to debug too if needed. In the era of websites such as Facebook or Instagram, we need React to offload a lot of data that these apps use from the DOM. Simply put, React does a lot of work for web developers, as well as provides good user experience on the other end.
 
 2. Describe component state.
 
-In plain words, state is an object that manifests a component's current situation, it is managed within the component. State starts with a default value when a component mounts and then suffers from mutations in time. It is a snapshot in a way.
+In plain words, state is an object that holds a component's current data, it is managed within the component. State starts with a default value when a component mounts and then suffers from mutations in time. It is a snapshot in a way.
 
 3. Describe props.
 
